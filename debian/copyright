@@ -1,6 +1,7 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: pkg
 Source: https://github.com/coreos/pkg
+Files-Excluded: capnslog/*
 
 Files: *
 Copyright: 2014-2016 CoreOS, Inc

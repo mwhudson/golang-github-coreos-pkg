@@ -1,7 +1,5 @@
 #!/usr/bin/make -f
 
-export DH_GOLANG_EXCLUDES := capnslog/example
-
 %:
 	dh $@ --buildsystem=golang --with=golang
 
