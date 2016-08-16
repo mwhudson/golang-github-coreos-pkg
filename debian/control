@@ -2,26 +2,36 @@ Source: golang-github-coreos-pkg
 Section: devel
 Priority: extra
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-XSBC-Original-Maintainer: Debian Go Packaging Team <pkg-go-maintainers@lists.alioth.debian.org>
+Xsbc-Original-Maintainer: Debian Go Packaging Team <pkg-go-maintainers@lists.alioth.debian.org>
 Uploaders: Tim Potter <tpot@hpe.com>
 Build-Depends: debhelper (>= 9),
                dh-golang (>= 1.17~),
                golang-go,
                golang-golang-x-crypto-dev,
-               golang-yaml.v2-dev
+               golang-yaml.v2-dev,
+               golang-any-shared-dev
 Standards-Version: 3.9.8
 Homepage: https://github.com/coreos/pkg
 Vcs-Browser: https://anonscm.debian.org/cgit/pkg-go/packages/golang-github-coreos-pkg.git
 Vcs-Git: https://anonscm.debian.org/git/pkg-go/packages/golang-github-coreos-pkg.git
-XS-Go-Import-Path: github.com/coreos/pkg
+Xs-Go-Import-Path: github.com/coreos/pkg
 
 Package: golang-github-coreos-pkg-dev
-Architecture: all
+Architecture: any
 Depends: ${shlibs:Depends},
          ${misc:Depends},
          golang-go,
          golang-golang-x-crypto-dev,
-         golang-yaml.v2-dev
+         golang-yaml.v2-dev,
+         libgolang-github-coreos-pkg1 (= ${binary:Version})
+Description: collection of Go utility packages
+ This package contains a collection of Go utility libraries for use
+ in projects written by CoreOS, Inc.
+
+Package: libgolang-github-coreos-pkg1
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Provides: ${golang:Provides}
 Description: collection of Go utility packages
  This package contains a collection of Go utility libraries for use
  in projects written by CoreOS, Inc.

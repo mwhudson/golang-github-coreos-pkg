@@ -1,7 +1,8 @@
-golang-github-coreos-pkg (3~ds1-0ubuntu1) UNRELEASED; urgency=medium
+golang-github-coreos-pkg (3~ds1-0ubuntu1~ppa1) UNRELEASED; urgency=medium
 
   * New upstream release.
   * Repack to exclude capnslog, will be packaged separately. (Closes: #827928)
+  * Build shared lib package.
 
  -- Michael Hudson-Doyle <michael.hudson@ubuntu.com>  Tue, 16 Aug 2016 09:55:51 +1200
 
